@@ -15,5 +15,5 @@ if __name__ == "__main__":
     
     df.reset_index(drop=True, inplace=True)
     json_records = list(json.loads(df.T.to_json()).values())
-
+    
     collection.insert_many(json_records)
