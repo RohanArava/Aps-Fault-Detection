@@ -1,7 +1,7 @@
 ./aps_failure_training_set1.csv
-./logs
+./logs/
 ./.env
-./artifact
+./artifact/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
