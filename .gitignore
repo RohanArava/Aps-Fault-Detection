@@ -1,6 +1,7 @@
 aps_failure_training_set1.csv
 logs/
 .env
+.vscode/
 artifact/
 # Byte-compiled / optimized / DLL files
 __pycache__/
