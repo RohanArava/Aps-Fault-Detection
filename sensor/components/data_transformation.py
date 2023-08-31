@@ -5,10 +5,10 @@ from sensor import utils
 from sensor.entity import config_entity, artifact_entity
 from sensor.exception import SensorException
 from sensor.logger import logging
-from scipy.stats import ks_2samp
 from typing import Optional
 import os, sys
-from sklearn.preprocessing import Pipeline, RobustScaler
+from sklearn.preprocessing import RobustScaler
+from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sensor.config import TARGET_COLUMN
 from imblearn.combine import SMOTETomek
@@ -17,7 +17,7 @@ class DataTransformation:
     def __init__(self, data_transformation_config:config_entity.DataTransformationConfig, data_ingestion_artifact:artifact_entity.DataIngestionArtifact):
         try:
             logging.info(f"{'>>'*20} Data Transformation {'<<'*20}")
-            self.data_transformation_cofig = data_transformation_config
+            self.data_transformation_config = data_transformation_config
             self.data_ingestion_artifact = data_ingestion_artifact
 
         except Exception as e:
